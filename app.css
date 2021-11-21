@@ -1,0 +1,180 @@
+﻿@keyframes text {
+    0% {
+        color: rgba(100, 10, 10, 0.7);
+    }
+
+    50% {
+        color: rgba(100, 10, 10, 1);
+    }
+
+    100% {
+        color: rgba(100, 10, 10, 0.7);
+    }
+}
+
+@keyframes h2 {
+    0% {
+        text-shadow: 2px 2px 4px darkred;
+    }
+
+    50% {
+        text-shadow: 0px 0px 0px;
+    }
+
+    100% {
+        text-shadow: 2px 2px 4px darkred;
+    }
+}
+
+@keyframes menuOfWeather {
+    0% {
+        max-height: 0;
+    }
+
+    100% {
+        max-height: 230px;
+    }
+}
+
+@keyframes menuOfWeatherEnd {
+    0% {
+        max-height: 230px;
+    }
+
+    100% {
+        max-height: 0;
+    }
+}
+
+@font-face {
+    font-family: diablo;
+    src: url("fonts/diablo.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: diablo;
+    font-size: 21px;
+    font-weight: 700;
+    animation-name: text;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    cursor: default;
+}
+
+body {
+    background-color: black;
+    background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.box-map {
+    display: flex;
+}
+
+.box-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.text {
+    font-size: 15px;
+}
+
+.h3 {
+    font-size: 18px;
+    border-bottom: 2px solid darkred;
+}
+
+.h2 {
+    font-size: 21px;
+    animation-name: h2;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-bottom: 4px solid darkred;
+}
+
+.out {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: black;
+    padding: 13px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    animation-name: menuOfWeather;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    user-select: none;
+}
+
+.absolute-image {
+    position: absolute;
+    top: 0;
+    width: 66px;
+    height: 66px;
+    background-image: url("images/logo.png");
+    background-repeat: round;
+}
+
+#right {
+    left: 0;
+}
+
+#left {
+    right: 0;
+}
+
+.city-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.temperature {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.few-info {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    background-repeat: round;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link-box {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
