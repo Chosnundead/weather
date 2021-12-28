@@ -1,6 +1,6 @@
 ﻿document.querySelector("#map").onclick = () => {
     document.querySelector("#out").style.animationName = "menuOfWeatherEnd";
-    setTimeout(() => { document.querySelector("#out").style.display = "none"; }, 2000);
+    setTimeout(() => { document.querySelector("#out").style.display = "none"; }, 1750);
 }
 
 let cities = {
